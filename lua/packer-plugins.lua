@@ -2,7 +2,8 @@ return require('packer').startup(function()
 	--packer can manage itself 
 	use 'wbthomason/packer.nvim'
 	--color
-	use 'gruvbox-community/gruvbox'
+	--use 'gruvbox-community/gruvbox'
+	use 'monsonjeremy/onedark.nvim'
 
 	--lsp and complete
 	use 'neovim/nvim-lspconfig'
@@ -29,6 +30,12 @@ return require('packer').startup(function()
 
 	--comments
 	use "terrortylor/nvim-comment"
+
+	--lualine
+	use {
+	'nvim-lualine/lualine.nvim',
+	requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
 
 end)
 
