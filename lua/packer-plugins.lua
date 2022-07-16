@@ -14,5 +14,21 @@ return require('packer').startup(function()
 	--luasnip
 	use 'L3MON4D3/LuaSnip'
 	use 'saadparwaiz1/cmp_luasnip'
+
+	--treesitter
+	use {
+	'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+	}
+
+	--autopair
+	use {
+	"windwp/nvim-autopairs",
+	config = function() require("nvim-autopairs").setup {} end
+	}
+
+	--comments
+	use "terrortylor/nvim-comment"
+
 end)
 
